@@ -18,6 +18,8 @@ make install
 ```
 This command creates a virtual environment in a venv directory, then installs the necessary dependencies listed in requirements.txt.
 
+&nbsp;&nbsp;
+
 ### Step 2: Generate QR Code
 
 To generate a QR code that encodes a TOTP URI compatible with Google Authenticator, run:
@@ -28,6 +30,8 @@ make run ARGS="--generate-qr"
 
 This command will create a QR code image named qr.png in the current directory. This QR code can be scanned by Google Authenticator app to add the account for OTP generation.
 
+&nbsp;&nbsp;
+
 ### Step 3: Generate a Single OTP
 
 To generate an OTP for the current 30-second interval (which will match the OTP in Google Authenticator), run:
@@ -35,9 +39,9 @@ To generate an OTP for the current 30-second interval (which will match the OTP 
 ```bash
 make run ARGS="--get-otp"
 ```
+&nbsp;&nbsp;
 
 ### Step 4: Clean Up
-
 To delete the virtual environment, use the following command:
 
 ```bash
