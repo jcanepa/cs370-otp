@@ -9,13 +9,16 @@ secret_key = 'JD3XNKOGKREHUZLZVZHYKUXXBZQSGPNV' # pyotp.random_base32()
 
 def generate_qr(user, issuer, secret):
     # Create the URI expected by Google Authenticator
-    uri = pyotp.totp.TOTP(secret).provisioning_uri(name=user, issuer_name=issuer)
+    uri = pyotp.totp.TOTP(secret).provisioning_uri(
+        name=user,
+        issuer_name=issuer)
 
-    # Generate the QR codex``
+    # Generate the QR codex
     qr = qrcode.make(uri)
-    qr.save("qr.png")
 
-    print("QR code saved as 'qr.png'.")
+    filename = 'qr.png'
+    qr.save(filename)
+    print('QR code saved as', filename)
 
 def get_otp(secret):
     totp = pyotp.TOTP(secret)
@@ -26,7 +29,7 @@ def get_otp(secret):
 def main():
     # Parse command-line arguments
     if len(sys.argv) < 2:
-        print("Usage: ./submission --generate-qr or ./submission --get-otp")
+        print('Usage: make run ARGS="--generate-qr" or make run ARGS="--get-otp"')
         return
 
     if sys.argv[1] == "--generate-qr":
