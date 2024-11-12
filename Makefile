@@ -1,4 +1,4 @@
-# Define the Python interpreter for the virtual environment
+# defines python interpreter for the virtual environment
 VENV := venv
 PYTHON := $(VENV)/bin/python
 PIP := $(VENV)/bin/pip
