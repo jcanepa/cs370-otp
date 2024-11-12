@@ -4,8 +4,7 @@ This application generates Time-Based One-Time Passwords (TOTPs) compatible with
 
 The program includes:
 - QR code generation for Google Authenticator.
-- OTP generation that matches Google Authenticator codes for 30-second intervals.
-- Continuous OTP generation that updates every 30 seconds (optional).
+- Continuous OTP generation that matches Google Authenticator codes for 30-second intervals.
 
 ## Running the Program
 
