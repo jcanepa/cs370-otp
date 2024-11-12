@@ -47,4 +47,4 @@ To delete the virtual environment, use the following command:
 ```bash
 make clean
 ```
-This will remove the venv directory.
+This will remove the venv directory, which effectively deactivates the virtual environment.
